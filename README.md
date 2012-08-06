@@ -18,7 +18,7 @@ Variables on different devices
 * Desktop
    * = "" // empty string
 * tablet ipad
-   * = "tablet ipad touch"
+   * = "tablet ipad ios touch"
 * tablet android
    * = "tablet android touch"
 * iphone / ipod touch
