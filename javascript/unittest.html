@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+<script type="text/javascript">
+"use strict";
+
+    var devices = {
+    iphone:[
+        'Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5',
+        'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_1 like Mac OS X; zh-tw) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8G4 Safari/6533.18.5'
+    ],
+    android_mobile: [
+        'Mozilla/5.0 (Linux; U; Android 2.1-update1; de-de; HTC Desire 1.19.161.5 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17',
+        'Mozilla/5.0 (Linux; U; Android 4.0.4; en-au; Galaxy Nexus Build/IMM76I) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    ],
+    ipad:[
+        'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; es-es) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B360 Safari/531.21.10'
+    ],
+    android_tablet: [
+        'Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13'
+    ],
+    desktop: [
+        'Mozilla/5.0 (Windows; U; MSIE 9.0; WIndows NT 9.0; en-US))',
+        'Mozilla/6.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4',
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.21 (KHTML, like Gecko) Chrome/19.0.1042.0 Safari/535.21'
+    ]
+    };
+
+    var expected_results = {
+        iphone: "iphone ios mobile touch",
+        android_mobile: "android mobile touch",
+        android_tablet: "android tablet touch",
+        ipad: "ipad ios tablet touch",
+        desktop: ""
+    };
+
+
+module("test mobile detection javascript");
+
+test("devices", function(){
+    var js
+    $.ajax("mobiledetection.js",
+        {
+            async: false,
+            DataType: "html",
+            success: function(data){ js = data; }
+        }
+    );
+
+    // mockup js
+    js = js.replace("navigator.userAgent", 'window.test_device_ua');
+
+    for(var device in devices)
+    {
+        // clean up
+        window._device = document.documentElement.className = 'yo';
+        for(var i=0; i < devices[device].length; i++)
+        {
+            // assign user agent string
+            window.test_device_ua = devices[device][i];
+            eval(js);
+
+            if(device !== 'desktop')
+            {
+                ok(document.documentElement.className.indexOf(' ' + window._device)!=-1, 
+                    device + ": classname should contains window._device");
+            }
+
+            var actual = window._device.split(' ').sort().join(' ');
+            var expected = expected_results[device].split(' ').sort().join(' ');
+            equal(actual, expected, device + ": should be equal");
+        }
+    }
+});
+
+
+</script>
+</head>
+<body>
+<h1 id="qunit-header">regression test</h1>
+<h2 id="qunit-banner"></h2>
+<div id="qunit-testrunner-toolbar"></div>
+<h2 id="qunit-userAgent"></h2>
+<ol id="qunit-tests"></ol>
+</body>
+
+</html>
