@@ -35,10 +35,11 @@ Constant declare on different language
 
 How to use it?
 ----------------
-* copy the code from [github][https://github.com/girvan/mobile-detection/blob/master/javascript/mobiledetectioin.min.js]
-* paste the code between `<head> ... </head>`
+* copy the code from [github](https://github.com/girvan/mobile-detection/blob/master/javascript/mobiledetectioin.min.js)
+* paste the code as inline javascriptbetween `<head>...  <script> /* paste code here */ </script> ...</head>`
 * Thats it!
-We suggest to display the code inline instead of external js link in order to speed up your page
+
+We suggest to display the code inline instead of external js link in order to speed up your page.
 
 
 Examples:
