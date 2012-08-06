@@ -5,10 +5,12 @@ This project not only provides boolean(true of false) $mobile variable, but also
 
 Features:
 * dimensions for touch, ios, tablet and android
-* js: no jquery required.
-* js: able to put into `<head>`
-* js: the fast to implement responsive design.
-* js: light weight: Minimized code is less then 350 bytes.
+* no jquery required.
+* able to put into `<head>`
+* the fast to implement responsive design.
+* light weight: Minimized code is less then 350 bytes.
+* provide php code which equavlant to js code
+* full unittested
 
 
 Variables on different devices
@@ -25,13 +27,10 @@ Variables on different devices
    * = "android mobile touch"
 
 
-Constant declare on different language
+Output
 ----------------
-* Javascript / HTML:
-   * append class string into `<html>` tag
-   * global variable `_device` or `window._device`
-* PHP:
-   * declare to constant `_DEVICE`
+* append class string into `<html>` tag
+* global variable `_device` or `window._device`
 
 
 How to use it?
