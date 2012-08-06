@@ -1,0 +1,11 @@
+<phpunit>
+    <php>
+      <includePath>/usr/share/pear</includePath>
+    </php>
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <directory suffix=".php">./</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+
