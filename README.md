@@ -7,7 +7,7 @@ Features:
 * dimensions for touch, ios, tablet and android
 * js: no jquery required.
 * js: able to put into `<head>`
-* js: the fast way to have responsive design
+* js: the fast and light way to implement responsive design. Minimized code is less then 350 bytes.
 
 
 Variables on different devices
@@ -32,7 +32,22 @@ Constant declare on different language
 * PHP:
    * declare to constant `_DEVICE`
 
+
+Examples
+----------------
+* [CSS] Hide module(html block) on mobile device
+   * `.mobile #most-popular { display:none; }`
+* [CSS] bigger buttons on touch device include ipad, iphone and any android device
+   * `.touch input { line-height:24px; height:24px; }`
+* [JS] no this function on mobile device
+   * `if(window._device.indexOf('mobile') == -1)
+      {
+	  // do something
+      }
+   `
+	  
+
 Misc
 ----------------
 * Any other languages are welcome
-
+* Contact: girvanliu@gmail.com
