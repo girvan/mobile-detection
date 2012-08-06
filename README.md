@@ -27,9 +27,9 @@ Variables on different devices
 
 Constant declare on different language
 ----------------
-* Javascript:
+* Javascript / HTML:
    * append class string into `<html>` tag
-   * append variable on `window._device`
+   * global variable `_device` or `window._device`
 * PHP:
    * declare to constant `_DEVICE`
 
@@ -52,7 +52,7 @@ Examples:
 * [JS] no this function on mobile device
    * `if(window._device.indexOf('mobile') == -1)
       {
-	  // do something
+	  /* do something */
       }
    `
 	  
