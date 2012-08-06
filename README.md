@@ -7,7 +7,8 @@ Features:
 * dimensions for touch, ios, tablet and android
 * js: no jquery required.
 * js: able to put into `<head>`
-* js: the fast and light way to implement responsive design. Minimized code is less then 350 bytes.
+* js: the fast to implement responsive design.
+* js: light weight: Minimized code is less then 350 bytes.
 
 
 Variables on different devices
@@ -35,9 +36,9 @@ Constant declare on different language
 
 How to use it?
 ----------------
-* copy the code from [github](https://github.com/girvan/mobile-detection/blob/master/javascript/mobiledetectioin.min.js)
-* paste the code as inline javascriptbetween `<head>...  <script> /* paste code here */ </script> ...</head>`
-* Thats it!
+* copy the code from [github](https://github.com/girvan/mobile-detection/blob/master/javascript/mobiledetection.min.html)
+* paste the code between `<head> ... </head>`
+* That's it!
 
 We suggest to display the code inline instead of external js link in order to speed up your page.
 
