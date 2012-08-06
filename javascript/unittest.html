@@ -14,7 +14,7 @@ function getJSON(url){
         async:false,
         DataType:"html",
         success:function(d){
-            console.log(d);
+            //console.log(d);
             json = $.parseJSON(d);
         }
     });
@@ -27,7 +27,6 @@ var expected_results = getJSON("_devices_results.json");
 module("test mobile detection javascript");
 
 test("devices", function(){
-    return;
     var js
     $.ajax("mobiledetection.js",
         {
