@@ -33,7 +33,15 @@ Constant declare on different language
    * declare to constant `_DEVICE`
 
 
-Examples
+How to use it?
+----------------
+* copy the code from [github][https://github.com/girvan/mobile-detection/blob/master/javascript/mobiledetectioin.min.js]
+* paste the code between `<head> ... </head>`
+* Thats it!
+We suggest to display the code inline instead of external js link in order to speed up your page
+
+
+Examples:
 ----------------
 * [CSS] Hide module(html block) on mobile device
    * `.mobile #most-popular { display:none; }`
