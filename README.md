@@ -25,6 +25,15 @@ Variables on different devices
    * = "iphone ios mobile touch"
 * android mobile device
    * = "android mobile touch"
+* blackberry mobile device
+   * = "blackberry mobile touch"
+* blackberry tablet device
+   * = "blackberry tablet touch"
+* windows phone mobile device
+   * = "wp mobile touch"
+* windows phone tablet device
+   * = "wp tablet touch"   
+
 
 
 Output
