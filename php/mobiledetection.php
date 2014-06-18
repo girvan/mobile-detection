@@ -14,6 +14,26 @@ else if(strpos($ua, 'android')!==false)
     else
         $mobile_detection[] = 'mobile';
 }
+else if(preg_match('/BlackBerry|\bBB10\b|rim[0-9]+/is',$ua)) // BalckBerry Phone
+{
+    $mobile_detection[] = 'blackberry';
+    $mobile_detection[] = 'mobile';
+}
+else if(preg_match('/PlayBook|RIM Tablet/is',$ua)) // BlackBerry Tablet
+{
+    $mobile_detection[] = 'blackberry';
+    $mobile_detection[] = 'tablet';
+}
+else if(preg_match('/Windows Phone 8.0|Windows Phone OS|XBLWP7|ZuneWP7/is',$ua)) // Windows Phone
+{
+    $mobile_detection[] = 'wp';
+    $mobile_detection[] = 'mobile';
+}
+else if(strpos($ua, 'windows nt')!==false && strpos($ua, 'touch')!==false) // Windows Tablet
+{
+    $mobile_detection[] = 'wp';
+    $mobile_detection[] = 'tablet';
+}
 
 if(!empty($mobile_detection))
     $mobile_detection[] = 'touch';

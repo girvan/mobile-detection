@@ -19,6 +19,27 @@
      else
          device += ' mobile';
  }
+ else if(/BlackBerry|\bBB10\b|rim[0-9]+/i.test(ua)) // BalckBerry Phone
+ {
+    device += ' blackberry';
+    device += ' mobile';
+ }
+ else if(/PlayBook|RIM Tablet/i.test(ua)) // BlackBerry Tablet
+ {
+    device += ' blackberry';
+    device += ' tablet';
+ }
+ else if(/Windows Phone 8.0|Windows Phone OS|XBLWP7|ZuneWP7/i.test(ua)) // Windows Phone
+ {
+    device += ' wp';
+    device += ' mobile';
+ }
+ else if(ua.indexOf('windows nt')!= -1 && ua.indexOf('touch')!=-1) // Windows Tablet
+ {
+    device += ' wp';
+    device += ' tablet';
+ }
+
  if(device)
  {
      device = 'touch ' + device;

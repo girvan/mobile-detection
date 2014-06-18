@@ -3,5 +3,9 @@
 "android_mobile": "android mobile touch",
 "android_tablet": "android tablet touch",
 "ipad": "ipad ios tablet touch",
+"blackberry_mobile": "blackberry mobile touch",
+"blackberry_tablet": "blackberry tablet touch",
+"wp_mobile": "wp mobile touch",
+"wp_tablet": "wp tablet touch",
 "desktop": ""
 }
