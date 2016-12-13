@@ -68,4 +68,4 @@ Examples:
 Misc
 ----------------
 * Any other languages are welcome
-* Contact: girvanliu@gmail.com
+* Contact: service+githubmobiledetection@piliapp.com
