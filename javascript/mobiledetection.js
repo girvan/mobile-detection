@@ -19,7 +19,7 @@
      else
          device += ' mobile';
  }
- else if(/BlackBerry|\bBB10\b|rim[0-9]+/i.test(ua)) // BalckBerry Phone
+ else if(/BlackBerry|\bBB10\b/i.test(ua)) // BalckBerry Phone
  {
     device += ' blackberry';
     device += ' mobile';
