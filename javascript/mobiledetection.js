@@ -3,7 +3,7 @@
 // iphone / ipod touch: touch ios mobile iphone
 // ipad: touch ios tablet ipad
 // android phone: touch tablet android
-// please compress following code at http://refresh-sf.com/yui/
+// please compress following code at https://www.piliapp.com/minify/yui-compressor/
 (function(){
 
  var device = '', _ipad = 'ipad', _iphone = 'iphone', ua = navigator.userAgent.toLowerCase();
